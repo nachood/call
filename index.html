@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7e8ee" />
+    <title>Una llamada de Oriiii</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="call-app" aria-label="Videollamada de Oriiii">
+        <header class="app-bar">
+          <div class="brand-mark" aria-hidden="true">♡</div>
+          <div class="app-bar-copy">
+            <span class="app-bar-kicker">videollamada</span>
+            <strong>momentito especial</strong>
+          </div>
+          <span class="app-bar-signal" aria-hidden="true">•••</span>
+        </header>
+
+        <section class="screen incoming-screen" id="incoming-screen">
+          <div class="incoming-topline">
+            <span class="status-chip"><span class="status-dot"></span> llamada entrante</span>
+            <span class="tiny-sparkle" aria-hidden="true">✦</span>
+          </div>
+
+          <div class="incoming-content">
+            <div class="profile-orbit" aria-hidden="true">
+              <span class="orbit-heart heart-one">♥</span>
+              <span class="orbit-heart heart-two">♡</span>
+              <span class="orbit-heart heart-three">✦</span>
+              <div class="profile-ring">
+                <img src="orianafotoperfil.png" alt="" />
+              </div>
+            </div>
+            <p class="eyebrow">tu sobrina te está llamando</p>
+            <h1>Oriiii</h1>
+            <p class="incoming-subtitle">videollamada · ahora</p>
+            <div class="sound-wave" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="incoming-actions">
+            <button class="call-action call-action--decline" id="decline-call" type="button">
+              <span class="action-icon" aria-hidden="true">×</span>
+              <span>rechazar</span>
+            </button>
+            <button class="call-action call-action--answer" id="answer-call" type="button">
+              <span class="action-icon action-icon--phone" aria-hidden="true">☎</span>
+              <span>atender</span>
+            </button>
+          </div>
+          <p class="bottom-whisper">una llamadita llena de amor <span aria-hidden="true">♡</span></p>
+        </section>
+
+        <section class="screen call-screen is-hidden" id="call-screen" aria-live="polite">
+          <div class="video-stage">
+            <div class="call-topbar">
+              <div class="call-topbar-left">
+                <span class="live-indicator"><span></span> en llamada</span>
+                <span class="call-time" id="call-time">00:00</span>
+              </div>
+              <span class="quality-badge">HD</span>
+            </div>
+
+            <div class="main-video" id="main-video">
+              <img id="oriana-photo" src="oriana1.jpeg" alt="Oriiii en videollamada" />
+              <div class="video-shade" aria-hidden="true"></div>
+              <div class="speaker-tag">
+                <strong>Oriiii</strong>
+                <span>conectada</span>
+              </div>
+              <div class="message-bubble" id="message-bubble">
+                <span class="message-index" id="step-count">01 / 05</span>
+                <p id="message-text">HOOOOO</p>
+              </div>
+            </div>
+
+            <div class="self-view" aria-label="Tu novia en la videollamada">
+              <img src="ella.png" alt="Dibujo de tu novia" />
+              <span>mi amor</span>
+            </div>
+
+            <div class="stage-hearts" aria-hidden="true">♡　✦　♡</div>
+            <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+          </div>
+
+          <div class="call-controls">
+            <div class="progress-wrap">
+              <div class="progress-meta">
+                <span>mensajitos de Oriiii</span>
+                <span id="progress-label">1 de 5</span>
+              </div>
+              <div class="progress-track"><span id="progress-bar"></span></div>
+            </div>
+            <div class="controls-row">
+              <div class="utility-controls">
+                <button class="round-control" type="button" aria-label="Silenciar micrófono" title="Silenciar micrófono">⌁</button>
+                <button class="round-control" type="button" aria-label="Alternar cámara" title="Alternar cámara">▣</button>
+                <button class="round-control" type="button" aria-label="Altavoz" title="Altavoz">◖</button>
+              </div>
+              <button class="next-control" id="next-step" type="button">
+                <span>siguiente</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <button class="end-control" id="end-call" type="button" aria-label="Finalizar llamada" title="Finalizar llamada">×</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen ended-screen is-hidden" id="ended-screen">
+          <div class="ended-stamp" aria-hidden="true">♡</div>
+          <p class="eyebrow">llamada finalizada</p>
+          <h2>te amo mucho morr<span>&lt;3</span></h2>
+          <p class="ended-copy">ahora sí a ponerme a estudiar jeje</p>
+          <div class="ended-line" aria-hidden="true"><span></span> hasta la próxima llamadita <span></span></div>
+          <button class="replay-control" id="replay-call" type="button">
+            <span aria-hidden="true">↻</span>
+            volver a llamar
+          </button>
+          <button class="secret-control" id="secret-message" type="button">
+            <span aria-hidden="true">♡</span>
+            te extraño
+          </button>
+          <div class="secret-replies is-hidden" id="secret-replies" aria-live="polite"></div>
+          <div class="heart-confetti" id="heart-confetti" aria-hidden="true"></div>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
